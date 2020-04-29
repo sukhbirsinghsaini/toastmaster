@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+      body {
+         background: #ccc;
+      }
+
+      .flip {
+         -webkit-perspective: 800;
+         width: 450px;
+         height: 200px;
+         position: relative;
+         margin: 10px;
+      }
+
+      .flip .card.flipped {
+         -webkit-transform: rotatex(-180deg);
+      }
+
+      /* .flip .card.already-flipped {
+   background: red;
+} */
+      .flip .card {
+         width: 100%;
+         height: 100%;
+         -webkit-transform-style: preserve-3d;
+         -webkit-transition: 0.5s;
+      }
+
+      .flip .card .face {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         -webkit-backface-visibility: hidden;
+         z-index: 2;
+         font-family: Georgia;
+         font-size: 3em;
+         text-align: center;
+         line-height: 200px;
+      }
+
+      .flip .card .front {
+         position: absolute;
+         z-index: 1;
+         background: black;
+         color: white;
+         cursor: pointer;
+      }
+
+      .flip .card .back {
+         -webkit-transform: rotatex(-180deg);
+         background: white;
+         color: black;
+         cursor: pointer;
+         font-size: 2em;
+         text-align: center;
+         line-height: initial;
+      }
+   </style>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+   <!-- <script src="jquery.fittext.js"></script> -->
+</head>
+
+<body>
+   <table>
+      <tr>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     1
+                  </div>
+                  <div class="face back">
+                     Can thriller movies increase your stress levels?
+                  </div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     2
+                  </div>
+                  <div class="face back">
+                     5 ways to annoy your boss
+                  </div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     3
+                  </div>
+                  <div class="face back">
+                     How to Lose Your Mind in 10 Days
+                  </div>
+               </div>
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     4
+                  </div>
+                  <div class="face back">
+                     Life feels very much like a test I didn’t study for.
+                  </div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     5
+                  </div>
+                  <div class="face back">
+                     Be happy, it drives people crazy!
+                  </div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     6
+                  </div>
+                  <div class="face back">
+                     By plans I mean I want to stay home and watch Netflix.
+                  </div>
+               </div>
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     7
+                  </div>
+                  <div class="face back">
+                     Why read the book when you can just watch the movie?
+                  </div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     8
+                  </div>
+                  <div class="face back">
+                     What if murder is not a crime?
+                  </div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     9
+                  </div>
+                  <div class="face back">
+                     Back
+                  </div>
+               </div>
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     10
+                  </div>
+                  <div class="face back">
+                     Back
+                  </div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     11
+                  </div>
+                  <div class="face back">
+                     Back
+                  </div>
+               </div>
+            </div>
+         </td>
+         <td>
+            <div class="flip">
+               <div class="card">
+                  <div class="face front">
+                     12
+                  </div>
+                  <div class="face back">
+                     Back
+                  </div>
+               </div>
+            </div>
+         </td>
+      </tr>
+   </table>
+
+
+
+
+   <script>
+      $('.flip').click(function () {
+         $(this).find('.card').addClass('flipped');
+         return true;
+      });
+   </script>
+   <!-- .mouseleave(function(){
+   // $(this).removeClass('flipped');
+}); -->
+</body>
+
+</html>
